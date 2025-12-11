@@ -47,6 +47,9 @@ services:
           property: connectionString
     dockerCommand: bundle exec sidekiq -r ./config/sidekiq.rb
 
-  - type: keyvalue
+    - type: keyvalue
     name: terminus-cache
     plan: free
+    ipAllowList:
+      - source: 0.0.0.0/0
+        description: Allow all (dev)
