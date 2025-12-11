@@ -4,6 +4,9 @@ databases:
     databaseName: terminus
     postgresMajorVersion: 18
     user: terminus
+    ipAllowList:
+      - source: 0.0.0.0/0
+        description: Allow all (dev)
 
 services:
   - type: web
